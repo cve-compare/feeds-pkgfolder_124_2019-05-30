@@ -1,0 +1,80 @@
+{
+    "actions": [
+        {
+            "action": "install",
+            "module": "lodash",
+            "target": "4.17.11",
+            "isMajor": false,
+            "resolves": [
+                {
+                    "id": 782,
+                    "path": "lodash",
+                    "dev": false,
+                    "optional": false,
+                    "bundled": false
+                }
+            ]
+        }
+    ],
+    "advisories": {
+        "782": {
+            "findings": [
+                {
+                    "version": "4.17.10",
+                    "paths": [
+                        "lodash"
+                    ],
+                    "dev": false,
+                    "optional": false,
+                    "bundled": false
+                }
+            ],
+            "id": 782,
+            "created": "2019-02-13T16:16:53.770Z",
+            "updated": "2019-02-13T16:16:53.770Z",
+            "deleted": null,
+            "title": "Prototype Pollution",
+            "found_by": {
+                "link": "",
+                "name": "asgerf"
+            },
+            "reported_by": {
+                "link": "",
+                "name": "asgerf"
+            },
+            "module_name": "lodash",
+            "cves": [
+                "CVE-2018-16487"
+            ],
+            "vulnerable_versions": "<4.17.11",
+            "patched_versions": ">=4.17.11",
+            "overview": "Versions of `lodash` before 4.17.5 are vulnerable to prototype pollution. \n\nThe vulnerable functions are 'defaultsDeep', 'merge', and 'mergeWith' which allow a malicious user to modify the prototype of `Object` via `{constructor: {prototype: {...}}}` causing the addition or modification of an existing property that will exist on all objects.\n\n",
+            "recommendation": "Update to version 4.17.11 or later.",
+            "references": "- [HackerOne Report](https://hackerone.com/reports/380873)",
+            "access": "public",
+            "severity": "moderate",
+            "cwe": "CWE-471",
+            "metadata": {
+                "module_type": "",
+                "exploitability": 3,
+                "affected_components": ""
+            },
+            "url": "https://npmjs.com/advisories/782"
+        }
+    },
+    "muted": [],
+    "metadata": {
+        "vulnerabilities": {
+            "info": 0,
+            "low": 0,
+            "moderate": 1,
+            "high": 0,
+            "critical": 0
+        },
+        "dependencies": 1,
+        "devDependencies": 0,
+        "optionalDependencies": 0,
+        "totalDependencies": 1
+    },
+    "runId": "a2e97407-0345-47f2-8df1-f5566cf477e3"
+}
